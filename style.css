@@ -22,7 +22,10 @@ body {
     line-height: 1.6;
 }
 
-a { text-decoration: none; color: inherit; }
+a {
+    text-decoration: none;
+    color: inherit;
+}
 
 /* Navbar */
 .navbar {
@@ -87,6 +90,7 @@ a { text-decoration: none; color: inherit; }
     margin-bottom: 1.5rem;
     background: linear-gradient(to right, #fff, #b0b0b0);
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -101,7 +105,8 @@ a { text-decoration: none; color: inherit; }
     gap: 1rem;
 }
 
-.btn-primary, .btn-secondary {
+.btn-primary,
+.btn-secondary {
     padding: 0.8rem 2rem;
     border-radius: 8px;
     font-weight: 600;
@@ -118,7 +123,8 @@ a { text-decoration: none; color: inherit; }
     color: var(--text-light);
 }
 
-.btn-primary:hover, .btn-secondary:hover {
+.btn-primary:hover,
+.btn-secondary:hover {
     transform: translateY(-3px);
 }
 
@@ -285,8 +291,10 @@ footer {
         flex-direction: column;
         text-align: center;
     }
-    
-    .logo { font-size: 1.2rem; }
+
+    .logo {
+        font-size: 1.2rem;
+    }
 }
 
 /* Contact Form */
@@ -321,4 +329,125 @@ footer {
 
 .contact-form button:hover {
     background-color: var(--accent);
+}
+
+/* Mobile Responsive (375px) */
+@media (max-width: 480px) {
+
+    /* Mengcover 375px dan perangkat mobile umum */
+    /* Global Adjustments */
+    .section-title {
+        font-size: 2rem;
+        margin-bottom: 2rem;
+    }
+
+    /* Navbar */
+    .navbar {
+        flex-direction: column;
+        padding: 1rem;
+        gap: 1rem;
+    }
+
+    .nav-links {
+        gap: 1rem;
+        flex-wrap: wrap;
+        justify-content: center;
+        width: 100%;
+    }
+
+    .nav-links li {
+        font-size: 0.9rem;
+    }
+
+    .btn-contact {
+        padding: 0.4rem 1rem;
+        font-size: 0.9rem;
+    }
+
+    /* Hero Section */
+    .hero {
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+
+    .hero-content h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-content p {
+        font-size: 1rem;
+    }
+
+    .cta-buttons {
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .btn-primary,
+    .btn-secondary {
+        width: 100%;
+        text-align: center;
+    }
+
+    /* Features Section */
+    .features {
+        padding: 3rem 1.5rem;
+    }
+
+    .feature-grid {
+        grid-template-columns: 1fr;
+        /* Stack cards vertically */
+    }
+
+    .feature-card {
+        padding: 1.5rem;
+    }
+
+    /* Team Section */
+    .team {
+        padding: 3rem 1.5rem;
+    }
+
+    .team-member {
+        width: 100%;
+        /* Full width on mobile */
+    }
+
+    /* Preview Section */
+    .preview {
+        padding: 3rem 1.5rem;
+    }
+
+    /* Download Section */
+    .download {
+        padding: 3rem 1.5rem;
+    }
+
+    .download-box {
+        padding: 2rem 1.5rem;
+    }
+
+    .btn-download {
+        width: 100%;
+        padding: 1rem;
+        font-size: 1rem;
+    }
+
+    /* Footer */
+    footer {
+        padding: 3rem 1.5rem;
+        text-align: center;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2.5rem;
+    }
+
+    .contact-form input,
+    .contact-form textarea,
+    .contact-form button {
+        font-size: 16px;
+        /* Prevent zoom on mobile inputs */
+    }
 }
